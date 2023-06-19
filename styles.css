@@ -1,0 +1,323 @@
+/* CSS Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 97vw;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    ;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    text-align: center;
+}
+
+.hero {
+
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h2 {
+    color: #fff;
+    font-size: 200px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.feature {
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.feature i {
+    font-size: 48px;
+    color: #003366;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cta a {
+    display: inline-block;
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta a:hover {
+    background-color: #002147;
+}
+
+footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+h2,
+h3,
+a {
+    color: #34495e;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.main-nav {
+    margin-top: 5px;
+
+}
+
+.logo a,
+.main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+}
+
+.main-nav a {
+    color: whitesmoke;
+    font-size: .99em;
+}
+
+.main-nav a:hover {
+    color: #718daa;
+}
+
+
+
+.header {
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 5px;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border: 1px solid #a2a2a2;
+    background-color: #f4f4f4;
+    /* -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75); */
+    /* box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75); */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #3f3354;
+    color: white;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+
+@media (min-width: 769px) {
+
+    .header,
+    .main-nav {
+        display: flex;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+
+        .header {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;
+        }
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+.logo {
+    max-width: 10vh;
+    max-height: 10vw;
+    animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+
+#sliders {
+    list-style: none;
+    position: relative;
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    left: 10px;
+    right: 20px;
+    /* border-style: solid;
+    border-width: 3px;
+    margin-top: 20px; */
+}
+
+#slider li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 0;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    transition: opacity 1s
+}
+
+#sliders li.slider-active {
+    z-index: 1;
+    opacity: 1;
+}
+
+.infralog {
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    padding: .5px;
+}
+
+.text {
+    text-align: justify;
+}
+
+/* animação do texo da segunda box */
+
+.anima {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 2s steps(27) infinite alternate,
+        blink 800ms steps(27) infinite normal;
+    border-right: 2px solid black;
+    text-align: center;
+}
+
+.style {
+    text-align: center;
+}
+
+li:before {
+    content: '•';
+    display: inline-block;
+    position: absolute;
+    left: -1em;
+    color: #00c7ba;
+}
+
+.second {
+    width: 250px;
+    height: 150px;
+}
+
+.anima {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 2s steps(27) infinite alternate,
+        blink 800ms steps(27) infinite normal;
+    border-right: 2px solid black;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 94%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: black;
+    }
+
+    to {
+        border-color: transparent;
+    }
+}
+
+.cases {
+    width: 200px;
+    height: 50px;
+}
